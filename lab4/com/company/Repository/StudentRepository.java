@@ -118,7 +118,7 @@ public class StudentRepository extends InFileRepo<Student> {
         String separator=",";
         String line;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\blida\\development\\courses.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\blida\\development\\students.csv"));
             while ((line = reader.readLine()) != null) {
                 String[] student = line.split(separator);
                 String firstName = student[0].replace("\"","");
@@ -162,7 +162,7 @@ public class StudentRepository extends InFileRepo<Student> {
     @Override
     public void writeToFile() throws IOException {
         List<Student> studentList = repoList;
-        new PrintWriter("C:\\Users\\blida\\development\\courses.csv").close();
+        new PrintWriter("C:\\Users\\blida\\development\\students.csv").close();
         for (Student student:studentList) {
             String courseIDs="";
             String data= "";
@@ -175,7 +175,7 @@ public class StudentRepository extends InFileRepo<Student> {
             }
             String list="["+courseIDs+"]";
             data = student.getFirstName()+","+student.getLastName()+","+student.getID()+","+student.getTotalCredits()+","+list+"\n";
-            Files.write(Paths.get("C:\\Users\\blida\\development\\courses.csv"),data.getBytes(), StandardOpenOption.APPEND);
+            Files.write(Paths.get("C:\\Users\\blida\\development\\students.csv"),data.getBytes(), StandardOpenOption.APPEND);
         }
 
 
