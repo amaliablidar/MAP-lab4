@@ -111,7 +111,7 @@ public class TeacherRepository extends InFileRepo<Teacher> {
         String separator=",";
         String line;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\blida\\development\\courses.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\blida\\development\\teachers.csv"));
             while ((line = reader.readLine()) != null) {
 
                 String[] teacher = line.split(separator);
@@ -152,7 +152,7 @@ public class TeacherRepository extends InFileRepo<Teacher> {
     @Override
     public void writeToFile() throws IOException {
         List<Teacher> teacherList = repoList;
-        new PrintWriter("C:\\Users\\blida\\development\\courses.csv").close();
+        new PrintWriter("C:\\Users\\blida\\development\\teachers.csv").close();
         for (Teacher teacher:teacherList) {
             String courseIDs="";
             String data= "";
@@ -165,7 +165,7 @@ public class TeacherRepository extends InFileRepo<Teacher> {
             }
             data = teacher.getFirstName()+","+teacher.getLastName()+","+teacher.getID()+","+",["+stringBuffer+"]"+"\n";
             System.out.println(data);
-            Files.write(Paths.get("C:\\Users\\blida\\development\\courses.csv"),data.getBytes(), StandardOpenOption.APPEND);
+            Files.write(Paths.get("C:\\Users\\blida\\development\\teachers.csv"),data.getBytes(), StandardOpenOption.APPEND);
         }
     }
 }
