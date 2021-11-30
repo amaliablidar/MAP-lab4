@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="408.0" y="160.0">com.company.Repository.CourseRepository</node>
+    <node x="280.5" y="252.5">com.company.Controller.RegistrationSystemController</node>
+    <node x="0.0" y="315.0">com.company.Model.Teacher</node>
+    <node x="232.0" y="80.0">com.company.Repository.InFileRepo</node>
+    <node x="0.0" y="160.0">com.company.Repository.TeacherRepository</node>
+    <node x="380.0" y="80.0">com.company.Model.Course</node>
+    <node x="204.0" y="160.0">com.company.Repository.StudentRepository</node>
+    <node x="306.0" y="0.0">com.company.Repository.CrudRepo</node>
+    <node x="124.0" y="315.0">com.company.Model.Student</node>
+    <node x="66.0" y="235.0">com.company.Model.Person</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.company.Repository.TeacherRepository" target="com.company.Repository.InFileRepo">
+      <point x="0.0" y="-15.0" />
+      <point x="92.0" y="135.0" />
+      <point x="253.33333333333331" y="135.0" />
+      <point x="-42.66666666666666" y="15.0" />
+    </edge>
+    <edge source="com.company.Repository.StudentRepository" target="com.company.Repository.InFileRepo">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.company.Model.Student" target="com.company.Model.Person">
+      <point x="0.0" y="-15.0" />
+      <point x="176.0" y="290.0" />
+      <point x="138.0" y="290.0" />
+      <point x="24.0" y="15.0" />
+    </edge>
+    <edge source="com.company.Repository.CourseRepository" target="com.company.Repository.InFileRepo">
+      <point x="0.0" y="-15.0" />
+      <point x="496.0" y="135.0" />
+      <point x="338.66666666666663" y="135.0" />
+      <point x="42.66666666666663" y="15.0" />
+    </edge>
+    <edge source="com.company.Model.Course" target="com.company.Repository.CrudRepo">
+      <point x="0.0" y="-15.0" />
+      <point x="428.0" y="55.0" />
+      <point x="390.0" y="55.0" />
+      <point x="28.0" y="15.0" />
+    </edge>
+    <edge source="com.company.Repository.InFileRepo" target="com.company.Repository.CrudRepo">
+      <point x="0.0" y="-15.0" />
+      <point x="296.0" y="55.0" />
+      <point x="334.0" y="55.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="com.company.Model.Teacher" target="com.company.Model.Person">
+      <point x="0.0" y="-15.0" />
+      <point x="52.0" y="290.0" />
+      <point x="90.0" y="290.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="408.0" y="208.22222222222223" />
+  <SelectedNodes>
+    <node>com.company.Controller.RegistrationSystemController</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
