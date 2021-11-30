@@ -133,5 +133,70 @@ public class RegistrationSystemController
         return null;
 
     }
+    /**
+    * metoda sorteaza studentii alfabetic
+    * @return lista sortata
+    **/
+        public ArrayList<Student> alphabeticallySorted(ArrayList<Student>students)
+    {
+        ArrayList<Student> newList = new ArrayList<>(students);
+        newList.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getLastName().compareTo(o2.getLastName());
+            }
+        });
+        return newList;
+    }
+    
+    /**
+     * 
+     * @param courses lista de cursuri ce trebuie sortata alfabetic
+     * @return lista sortata
+     */
+    public ArrayList<Course> sortCoursesAlphabetically(ArrayList<Course> courses)
+    {
+        ArrayList<Course> newList = new ArrayList<>(courses);
+        newList.sort(new Comparator<Course>() {
+            @Override
+            public int compare(Course o1, Course o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+
+        return newList;
+    }
+
+    /**
+     * 
+     * @param credits numarul de credite dupa care sunt filtrati studentii
+     * @param studentList lista studentilor ce trebuie filtrati
+     * @return lista studentilor dupa filtrare
+     */
+       public ArrayList<Student> filterStudentsByCreditNr(int credits,ArrayList<Student>studentList)
+    {
+        ArrayList<Student> newList=new ArrayList<>();
+        for (Student student:studentList)
+        {
+            if (student.getTotalCredits()==credits)
+                newList.add(student);
+        }
+        return newList;
+    }
+    /**
+     * 
+     * @param credits numarul de credite dupa care trebuie filtrata lista de cursuri
+     * @return lista de cursuri filtrate dupa credite
+     */
+    public List<Course> filterCoursesByCreditNr(int credits, ArrayList<Course> courseList)
+    {
+        ArrayList<Course> newList=new ArrayList<>();
+        for (Course course:courseList)
+        {
+            if (course.getCredits()==credits)
+                newList.add(course);
+        }
+        return newList;
+    }
 
 }
