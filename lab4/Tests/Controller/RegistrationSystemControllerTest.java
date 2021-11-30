@@ -32,14 +32,14 @@ class RegistrationSystemControllerTest {
      */
     @BeforeEach
     void init() throws FileNotFoundException {
-        ArrayList<Course>courseRepoList=new ArrayList<>();
-        courseRepo=new CourseRepository(courseRepoList);
+        ArrayList<Course>courses=new ArrayList<>();
+        courseRepo=new CourseRepository(courses);
 
-        ArrayList<Student>studentRepoList=new ArrayList<>();
-        studentRepo=new StudentRepository(studentRepoList);
+        ArrayList<Student>students=new ArrayList<>();
+        studentRepo=new StudentRepository(students);
 
-        ArrayList<Teacher>teacherRepoList=new ArrayList<>();
-        teacherRepo=new TeacherRepository(teacherRepoList);
+        ArrayList<Teacher>teachers=new ArrayList<>();
+        teacherRepo=new TeacherRepository(teachers);
 
         registrationSystem=new RegistrationSystemController(studentRepo,teacherRepo,courseRepo);
 
@@ -47,12 +47,12 @@ class RegistrationSystemControllerTest {
         ArrayList<Student> studentListOOP = new ArrayList<>();
         ArrayList<Student> studentListMAP = new ArrayList<>();
 
-        ArrayList<Course> courseListteacher2 = new ArrayList<>();
         ArrayList<Course> courseListteacher1 = new ArrayList<>();
+        ArrayList<Course> courseListteacher2 = new ArrayList<>();
 
         ArrayList<Course> courseListana=new ArrayList<>();
         ArrayList<Course> courseListmaria=new ArrayList<>();
-        ArrayList<Course> courseListUpdatedStud=new ArrayList<>();
+        ArrayList<Course> courseListbianca=new ArrayList<>();
 
         teacher1 = new Teacher("teacher1", "lastName1", 400L, courseListteacher1);
         teacher2 = new Teacher("teacher2", "lastName2", 401L, courseListteacher2);
@@ -63,7 +63,7 @@ class RegistrationSystemControllerTest {
 
         ana= new Student("ana","blidar",500L,5,courseListana);
         maria= new Student("maria","pop",501L,6,courseListmaria);
-        bianca= new Student("bianca","oanta",502L,7,courseListUpdatedStud);
+        bianca= new Student("bianca","oanta",502L,7,courseListbianca);
         courseListteacher1.add(OOP);
         courseListteacher2.add(MAP);
 
